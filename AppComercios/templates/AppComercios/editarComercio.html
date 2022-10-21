@@ -1,0 +1,23 @@
+{% extends 'AppCreditos/padre.html' %}
+
+{% load static %}
+
+{% block titulo %}
+EDITAR COMERCIOS
+{% endblock %}
+
+{% block formCarga %} 
+
+<form action="" method="POST"> {% csrf_token %}
+
+    <table class="text-white-75 mb-5">
+
+        {{formCo.as_table}}
+
+        
+    </table>
+    <hr class="divider" />
+    <input class="btn btn-primary btn-xl" type="submit" value="Guardar">
+</form>
+
+{% endblock %}

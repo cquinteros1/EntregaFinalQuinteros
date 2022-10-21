@@ -1,0 +1,21 @@
+{% extends 'AppCreditos/padre.html' %}
+
+{% load static %}
+
+{% block titulo %}
+ACERCA DE MI
+{% endblock %}
+
+{% block formCarga %} 
+
+Mi nombre es Carlos Quinteros y vivo en la ciudad de Santa Fe (Argentina). Soy Admnistrador de Empresas con una fuerte orientación y pasión por los datos.<br>
+Actualmente trabajo para una financiera local, ocupando el puesto de Responsable de Recupero y adicionalmente me encargo de la explotación de los datos de 
+la empresa para generar conocimiento.<br>
+Este acercamiento a los datos y sus herramientas hizo interesarme tambien por la programación, buscando profundizar mis conocimientos en Python y en la programacion web.<br>
+Este es mi proyecto final del curso (y mi prmer pagina we realizada!) de Python y Django de Coderhouse.<br>
+Bienvenidos a mi web!
+
+
+<hr class="divider" />
+<a class="btn btn-primary btn-xl" href="{% url 'INICIO' %}">Inicio</a>
+{% endblock %}

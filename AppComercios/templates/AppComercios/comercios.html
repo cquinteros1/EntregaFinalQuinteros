@@ -1,0 +1,16 @@
+{% extends 'AppCreditos/padre.html' %}
+
+{% load static %}
+
+{% block titulo %}
+COMERCIOS
+{% endblock %}
+
+{% block formCarga %} 
+
+En esta página podrá ver todos los comercios adheridos, buscar los comercios adheridos por rubro o dar de alta nuevos comercios (opción solo para usuarios habilitados) 
+<hr class="divider" />
+<a class="btn btn-primary btn-xl" href="{% url 'VER_COM' %}">Lista Comercios</a>
+<a class="btn btn-primary btn-xl" href="{% url 'BUSQ_CO_RU' %}">Busqueda Comercios</a>
+<a class="btn btn-primary btn-xl" href="{% url 'COMER' %}">Alta Comercios</a>
+{% endblock %}

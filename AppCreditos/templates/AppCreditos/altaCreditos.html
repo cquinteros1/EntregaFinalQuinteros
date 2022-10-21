@@ -1,0 +1,42 @@
+{% extends 'AppCreditos/padre.html' %}
+
+{% load static %}
+
+{% block titulo %}
+SOLICITUD DE CREDITOS
+{% endblock %}
+
+{% block formCarga %} 
+
+<!-- ESTA ES LA FORMA DE HACERLO CON FORMULARIOS HTML
+<form action="/AppCreditos/altaCred/" method="POST"> {% csrf_token %}  # /altaCred/ es la url
+
+<p>Nombre: <input type="text" name="nombreF"></p>
+<p>Apellido: <input type="text" name="apellidoF"></p>
+<p>DNI: <input type="number" name="dniF"></p>
+<p>Fecha Nacimiento: <input type="date" name="fecha_nacF"></p>
+<p>Telefono: <input type="number" name="telefonoF"></p>
+<p>Fecha Credito: <input type="date" name="fecha_credF"></p>
+<p>Importe: <input type="number" name="importeF"></p>
+<p>Cuotas: <input type="numbber" name="cuotasF"></p>
+
+<input type="submit" value="Guardar">
+
+</form> -->
+
+<!-- ESTA ES LA FORMA DE HACERLO CON LA API DE DJANGO -->
+
+<form action="" method="POST"> {% csrf_token %}
+
+    <table class="text-white-75 mb-5">
+
+        {{formCr.as_table}}
+
+        
+    </table>
+    <hr class="divider" />
+    <input class="btn btn-primary btn-xl" type="submit" value="Guardar">
+    <a class="btn btn-primary btn-xl" href="{% url 'INI_CLI' %}">Volver</a>
+</form>
+
+{% endblock %}

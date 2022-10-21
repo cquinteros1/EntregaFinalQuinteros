@@ -1,0 +1,17 @@
+{% extends 'AppCreditos/padre.html' %}
+
+{% load static %}
+
+{% block titulo %}
+CLIENTES
+{% endblock %}
+
+{% block formCarga %} 
+
+En esta página podrá hacer la solicitud de un crédito, realizar una reseña de comercios o consultar reseñas realizadas por otros clientes.
+
+<hr class="divider" />
+<a class="btn btn-primary btn-xl" href="{% url 'CREDS' %}">Solicitar Crédito</a>
+<a class="btn btn-primary btn-xl" href="{% url 'RESENA' %}">Hacer Reseña</a>
+<a class="btn btn-primary btn-xl" href="{% url 'BUSQ_CR_RE' %}">Buscar Reseña</a>
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends 'AppCreditos/padre.html' %}
+
+{% load static %}
+
+{% block titulo %}
+Registro de Usuario
+{% endblock %}
+
+{% block formCarga %} 
+
+<form class="text-white-75 mb-5" action="" method="POST">{% csrf_token %}
+
+    {{form_registro.as_p}}
+
+    <hr class="divider" />
+
+    <button class="btn btn-primary btn-xl" type="submit">Registrarse</button>
+
+</form>
+
+<hr class="divider" />
+
+{% endblock %}

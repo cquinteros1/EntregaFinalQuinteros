@@ -1,0 +1,15 @@
+{% extends 'AppCreditos/padre.html' %}
+
+{% load static %}
+
+{% block titulo %}
+BUSQUEDA DE RESEÑAS
+{% endblock %}
+
+{% block formCarga %} 
+
+{{rta_res}}
+<hr class="divider" />
+<a class="btn btn-primary btn-xl" href="{% url 'BUSQ_CR_RE' %}">Nueva Busqueda</a>
+
+{% endblock %}

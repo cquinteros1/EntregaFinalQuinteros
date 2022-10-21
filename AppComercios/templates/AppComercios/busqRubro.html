@@ -1,0 +1,23 @@
+{% extends 'AppCreditos/padre.html' %}
+
+{% load static %}
+
+{% block titulo %}
+BUSQUEDA DE COMERCIOS
+{% endblock %}
+
+{% block formCarga %} 
+    
+    <form action="/AppComercios/resultCoRU/" method="GET">
+
+        <label class="text-white-75 mb-5" for="rubro">Rubro:</label>
+        <input type="text" name="rubro" id="rubro">
+
+        <input class="btn btn-primary btn-xs" type="submit" value="Buscar">
+
+    </form>
+    
+<a class="btn btn-primary btn-xl" href="{% url 'INI_COMER' %}">Volver</a>
+
+{% endblock %}
+

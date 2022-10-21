@@ -1,0 +1,24 @@
+{% extends 'AppCreditos/padre.html' %}
+
+{% load static %}
+
+{% block titulo %}
+CARGA DE AVATARES
+{% endblock %}
+
+{% block formCarga %} 
+
+<form action="" method="POST" enctype="multipart/form-data"> {% csrf_token %}
+
+    <table class="text-white-75 mb-5 align-center">
+
+        {{formAva.as_table}}
+
+        
+    </table>
+    <hr class="divider" />
+    <input class="btn btn-primary btn-xl" type="submit" value="Guardar">
+
+</form>
+
+{% endblock %}

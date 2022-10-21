@@ -1,0 +1,34 @@
+{% extends 'AppCreditos/padre.html' %}
+
+{% load static %}
+
+{% block titulo %}
+LISTA DE COMERCIOS
+{% endblock %}
+
+{% block formCarga %} 
+
+    {% for c in co_ver %}
+
+    <li class="text-white-75 mb-5">
+        
+        {{c}}
+        
+        <br><a class="btn btn-primary btn-xs" href="{% url 'EDI_COM' c.nombre %}">Editar</a>
+        &nbsp;<a class="btn btn-primary btn-xs" href="{% url 'ELI_COM' c.nombre %}">Borrar</a>
+          
+    </li>
+    
+
+    
+    <hr class="divider" />
+    
+
+    {% endfor %}
+
+<a class="btn btn-primary btn-xl" href="{% url 'INI_COMER' %}">Volver</a>
+<a class="btn btn-primary btn-xl" href="{% url 'INI_CLI' %}">Clientes</a>
+
+{% endblock %}
+
+

@@ -1,0 +1,24 @@
+{% extends 'AppCreditos/padre.html' %}
+
+{% load static %}
+
+{% block titulo %}
+BUSQUEDA DE RESEÑAS
+{% endblock %}
+
+{% block formCarga %} 
+
+    <p class="text-white-75 mb-5">BUSCASTE RESEÑAS DEL COMERCIO {{comercio_res}}</p>
+    <hr class="divider" />
+    {% for res_por_comer in RES %}
+
+    <p class="text-white-75 mb-5">Usuario: {{res_por_comer.usuario}}</p>
+    <p class="text-white-75 mb-5">Comercio: {{res_por_comer.comercio_res}}</p>
+    <p class="text-white-75 mb-5">Comentario: {{res_por_comer.comentario}}</p>
+    <hr class="divider" />
+    {% endfor %}
+
+    <a class="btn btn-primary btn-xl" href="{% url 'BUSQ_CR_RE' %}">Nueva Busqueda</a>
+    <a class="btn btn-primary btn-xl" href="{% url 'INI_CLI' %}">Clientes</a>
+    <a class="btn btn-primary btn-xl" href="{% url 'INI_COMER' %}">Comercios</a>
+{% endblock %}

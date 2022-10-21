@@ -1,0 +1,41 @@
+{% extends 'AppCreditos/padre.html' %}
+
+{% load static %}
+
+{% block titulo %}
+ALTA DE COMERCIOS
+{% endblock %}
+
+{% block formCarga %} 
+
+<!-- ESTA ES LA FORMA DE HACERLO CON FORMULARIOS HTML
+<form action="/AppComercios/altaCom/" method="POST"> {% csrf_token %}
+
+<p>Nombre: <input type="text" name="nombreComF"></p>
+<p>CUIT: <input type="number" name="cuitF"></p>
+<p>Rubro: <input type="text" name="rubroF"></p>
+<p>Direccion: <input type="text" name="direccionF"></p>
+<p>Ciudad: <input type="text" name="ciudadF"></p>
+<p>Provincia: <input type="text" name="provinciaF"></p>
+<p>Fecha Adhesion: <input type="date" name="fechaAdF"></p>
+
+<input type="submit", value="Guardar">
+
+</form> -->
+
+<!-- ESTA ES LA FORMA DE HACERLO CON LA API DE DJANGO -->
+
+<form action="" method="POST"> {% csrf_token %}
+
+    <table class="text-white-75 mb-5">
+
+        {{formCo.as_table}}
+
+        
+    </table>
+    <hr class="divider" />
+    <input class="btn btn-primary btn-xl" type="submit" value="Guardar">
+    <a class="btn btn-primary btn-xl" href="{% url 'INI_COMER' %}">Volver</a>
+</form>
+
+{% endblock %}

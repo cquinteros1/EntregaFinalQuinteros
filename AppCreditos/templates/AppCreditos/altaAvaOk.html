@@ -1,0 +1,14 @@
+{% extends 'AppCreditos/padre.html' %}
+
+{% load static %}
+
+{% block titulo %}
+Carga de Avatar Exitosa
+
+<hr class="divider" />
+
+<a class="btn btn-primary btn-xl" href="{% url 'AVATAR' %}">Nuevo Avatar</a>
+<a class="btn btn-primary btn-xl" href="{% url 'INI_CLI' %}">Clientes</a>
+<a class="btn btn-primary btn-xl" href="{% url 'INI_COMER' %}">Comercios</a>
+
+{% endblock %}

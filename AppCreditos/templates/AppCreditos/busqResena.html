@@ -1,0 +1,20 @@
+{% extends 'AppCreditos/padre.html' %}
+
+{% load static %}
+
+{% block titulo %}
+BUSQUEDA DE RESEÑAS
+{% endblock %}
+
+{% block formCarga %} 
+    
+    <form action="/AppCreditos/resultCrRe/" method="GET">
+
+        <label class="text-white-75 mb-5" for="comercio_res">Comercio:</label>
+        <input type="text" name="comercio_res" id="comercio_res">
+
+        <input class="btn btn-primary btn-xs" type="submit" value="Buscar">
+
+    </form>
+    <a class="btn btn-primary btn-xl" href="{% url 'INI_CLI' %}">Volver</a>
+{% endblock %}
